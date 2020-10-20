@@ -1,4 +1,4 @@
-FROM node:12.11.1-alpine AS base
+FROM node:12.19.0-alpine AS base
 
 ENV NODE_ENV=production
 
@@ -22,7 +22,15 @@ RUN apk add --no-cache \
     python \
     zlib-dev
 
+RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
+    vips-dev \
+    vips \
+    libimagequant-dev \
+    libimagequant
+
 COPY package.json ./
+COPY .yarnrc ./
 RUN yarn install
 COPY . ./
 RUN yarn build
@@ -32,6 +40,9 @@ FROM base AS runner
 RUN apk add --no-cache \
     ffmpeg \
     tini
+RUN apk add --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
+    --repository http://dl-cdn.alpinelinux.org/alpine/edge/main \
+    vips
 RUN npm i -g web-push
 ENTRYPOINT ["/sbin/tini", "--"]
 
