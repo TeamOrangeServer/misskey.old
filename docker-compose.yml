@@ -53,7 +53,7 @@ services:
       - internal_network
     volumes: 
       - ./elasticsearch:/usr/share/elasticsearch/data
-      - ./es_config:/etc/elasticsearch/
+#      - ./es_config:/etc/elasticsearch/
 
 networks:
   internal_network:
