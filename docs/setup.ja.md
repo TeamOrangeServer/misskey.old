@@ -47,7 +47,7 @@ adduser --disabled-password --disabled-login misskey
 
 	`cd misskey`
 
-4. [最新のリリース](https://github.com/syuilo/misskey/releases/latest)を確認
+4. [最新のリリース](https://github.com/TeamOrangeServer/misskey/releases/latest)を確認
 
 	`git checkout master`
 

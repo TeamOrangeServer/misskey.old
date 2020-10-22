@@ -3,6 +3,7 @@ block vars
 doctype html
 
 != '\n<!-- Thank you for using Misskey! @syuilo -->\n'
+!= '\n<!-- reiskey by @sousuke0422 -->\n'
 
 html
 
@@ -13,7 +14,7 @@ html
 		meta(name='theme-color' content='#105779')
 		meta(property='og:site_name' content= instanceName || 'Misskey')
 		meta(name='viewport' content='width=device-width, initial-scale=1')
-		link(rel='icon' href= icon || '/favicon.ico')
+		link(rel='icon' type='image/png' href= icon || '/favicon.png')
 		link(rel='apple-touch-icon' href= icon || '/apple-touch-icon.png')
 		link(rel='manifest' href='/manifest.json')
 

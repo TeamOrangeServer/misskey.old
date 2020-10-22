@@ -17,7 +17,7 @@ Dockerを使ったMisskey構築方法
 
 	`cd misskey`
 
-3. [最新のリリース](https://github.com/syuilo/misskey/releases/latest)を確認
+3. [最新のリリース](https://github.com/TeamOrangeServer/misskey/releases/latest)を確認
 
 	`git checkout master`
 
